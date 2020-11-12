@@ -1,0 +1,28 @@
+{
+  "name": "respiratory-diseases-expert-system",
+  "version": "1.0.0",
+  "description": "An expery system for diagnosis of respiratory diseases",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/app.js",
+    "devstart": "nodemon lib/app.js"
+  },
+  "keywords": [
+    "Expert System",
+    "Respiratory Diseases",
+    "COVID-19"
+  ],
+  "contributors": [
+    "Wong Hao Jie <holmesqueen2070@yahoo.com> (https://github.com/rayjasson98)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "rools": "^2.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
