@@ -112,10 +112,13 @@
     </div>
     <div class="input">
       <div>
-        <button data-question="cough" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+        <button data-question="cough" data-choice="dry" data-answer-type="choice" class="submit" style="width: 14rem;">Yes. Dry Coughing.</button>
       </div>
       <div>
-        <button data-question="cough" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+        <button data-question="cough" data-choice="productive" data-answer-type="choice" class="submit" style="width: 14rem;">Yes. Productive (wet) Coughing.</button>
+      </div>
+      <div>
+        <button data-question="cough" data-choice="dry" data-answer-type="choice" class="submit" style="width: 14rem;">No.</button>
       </div>
     </div>
   </div>
@@ -249,13 +252,27 @@
   <div class="question-container" data-number="15">
     <div class="question">
       <h1 id="username">,</h1>
-      <p>you probably have</p>
+      <p id="youhave">you probably have</p>
       <h2 id="disease" style="font-weight: 400"></h2>
       <p id="percentage"></p>
-      <br>
-      <br>
-      <br>
-      <button class="try-agn-btn">Try again.</button>
+      <details>
+        <summary>Review your answer</summary>
+        <p id="review-name">Name: </p>
+        <p id="review-age">Age: </p>
+        <p id="review-gender">Gender: </p>
+        <p id="review-familyHistory">Family Health History: </p>
+        <p id="review-smokingHistory">Smoking History: </p>
+        <p id="review-chestPain">Chest pain: </p>
+        <p id="review-cough">Coughing: </p>
+        <p id="review-coughingUpBlood">Coughing Blood: </p>
+        <p id="review-fever">Fever: </p>
+        <p id="review-rapidBreathing">Rapid Breathing: </p>
+        <p id="review-shortnessOfBreath">Shortness of breath: </p>
+        <p id="review-rapidHeartbeat">Rapid Heartbeat: </p>
+        <p id="review-wheezing">Wheezing: </p>
+        <p id="review-duration">Duration of Symptoms: </p>
+      </details>
+      <button class="try-agn-btn" onclick="location.reload();">Try again</button>
 
     </div>
   </div>

@@ -120,6 +120,17 @@ document.querySelector('button[data-answer-type="number"]').addEventListener('cl
   const age = parseInt(ageInputEl.value);
   if (Number.isInteger(age) && age > 0 && age < 150) {
     answers.age = age;
+    if (answers.age <= 1)
+      facts.ageGroup = 'infants';
+    else if (answers.age <= 13)
+      facts.ageGroup = 'children';
+    else if (answers.age <= 35)
+      facts.ageGroup = 'youngAdults';
+    else if (answers.age <= 55)
+      facts.ageGroup = 'middleAged';
+    else
+      facts.ageGroup = 'elderly';
+    
     // go to next question and play animations
     questionEls[2].classList.add("question-container--slide-out");
     // slide in next question
@@ -180,20 +191,32 @@ choiceBtns.forEach((btn, i) => {
 function displayResult(disease, percentage) {
   let diseaseHTML = '';
   let percentageHTML = '';
-
   // if they are array (there are multiple diseases diagnosed)
-  if (disease.isArray) {
+  if (Array.isArray(disease)) {
     const [d1, d2] = disease;
     const [p1, p2] = percentage;
     diseaseHTML = `${findDiseaseName(d1)} or ${findDiseaseName(d2)}`;
     percentageHTML = `Diagnosis confidence: ${p1}% and ${p2}%`;
-  } else {
+  } else if (disease) {
     diseaseHTML = `${findDiseaseName(disease)}`;
     percentageHTML = `Diagnosis confidence: ${percentage}%`;
+  } else {
+    diseaseHTML = "";
+    percentageHTML = "";
+    document.getElementById('youhave').innerHTML = "you are healthy!";
   }
   document.getElementById('username').innerHTML = answers.name;
   document.getElementById('disease').innerHTML = diseaseHTML;
   document.getElementById('percentage').innerHTML = percentageHTML;
+  setTimeout(() => 
+    document.querySelector('.fixed-container').style.overflow = 'auto',
+    800
+  );
+
+  // display / review user's answer
+  for (const ans in answers) {
+    document.getElementById(`review-${ans}`).innerHTML += `${answers[ans]}`;
+  }
 }
 
 function findDiseaseName(code) {
