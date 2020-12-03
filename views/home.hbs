@@ -1,19 +1,279 @@
-<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
-    <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand mr-auto" href="#">Respiratory Diseases ES</a>
+<div class="fixed-container">
+  <!-- Introduction -->
+  <div class="question-container" data-number="0">
+    <div class="question">
+      <h1>COVID-19 & Other Respiratory Diseases Expert System</h1>
+      <p>What is this?</p>
+      <p>Answer 13 questions and we will tell you if you have a chance of having COVID-19 or other respiratory diseases.</p>
     </div>
-</nav>
+    <div class="input">
+      <button class="submit" data-answer-type="choice">OK ✔</button>
+    </div>
+  </div>
 
-<header class="jumbotron">
-    <div class="container">
-        <div class="row row-header">
-            <div class="col-12">
-                <h1>Expert System for Diagnosis of Respiratory Diseases</h1>
-                <p>Description</p>
-            </div>
-        </div>
+  <!-- question 0 -->
+  <div class="question-container" data-number="1">
+    <div class="question">
+      <h1>What is your name?</h1>
+      <p>Your name</p>
     </div>
-</header>
+    <div class="input">
+      <input id="nameInput" type="text" placeholder="Type your answer here." />
+      <button data-answer-type="text" class="submit">OK ✔</button>
+      <p id="nameInputReminder" style="color: red; display: none;">Fill in your name</p>
+    </div>
+  </div>
+
+  <!-- question 1 -->
+  <div class="question-container" data-number="2">
+    <div class="question">
+      <h1>1. How old are you?</h1>
+      <p>In years old.</p>
+    </div>
+    <div class="input">
+      <input id="ageInput" type="text" placeholder="Type your answer here." />
+      <button data-answer-type="number" class="submit">OK ✔</button>
+      <p id="ageInputReminder" style="color: red; display: none;">Fill in your age (MUST be a NUMBER and a VALID age).</p>
+    </div>
+  </div>
+  
+  <!-- question 2 -->
+  <div class="question-container" data-number="3">
+    <div class="question">
+      <h1>2. What is your gender?</h1>
+      <p>Male or Female.</p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="gender" data-choice="male" data-answer-type="choice" class="submit" style="width: 6rem;">Male</button>
+      </div>
+      <div>
+        <button data-question="gender" data-choice="female" data-answer-type="choice" class="submit" style="width: 6rem;">Female</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- question 3 -->
+  <div class="question-container" data-number="4">
+    <div class="question">
+      <h1>3. Do you have any family health history of any respiratory disease?</h1>
+      <p>Some examples of respiratory diseases are Acute Bronchitis, Asthma, Bronchiectasis, Bronchiolitis, COPD, COVID 19, Influenza, Lung Cancer, Cycstic Fibrosis, Pertussis, Occupational Lung Diseases, Rhinosinusitis, Tuberculosis.</p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="familyHistory" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="familyHistory" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 4 -->
+  <div class="question-container" data-number="5">
+    <div class="question">
+      <h1>4. Do you smoke or does anyone in your family smoke?</h1>
+      <p>Smoking can increases your risk of lung disease by damaging your airways and the small air sacs (alveoli) found in your lungs.</p>
+      <p>Source: <a href="https://www.cdc.gov/tobacco/data_statistics/fact_sheets/health_effects/effects_cig_smoking/index.htm#:~:text=1%2C2-,Smoking%20and%20Respiratory%20Disease,alveoli)%20found%20in%20your%20lungs.&text=Lung%20diseases%20caused%20by%20smoking,includes%20emphysema%20and%20chronic%20bronchitis.&text=Cigarette%20smoking%20causes%20most%20cases%20of%20lung%20cancer.">www.cdc.gov</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="smokingHistory" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="smokingHistory" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 5 -->
+  <div class="question-container" data-number="6">
+    <div class="question">
+      <h1>5. Do you feel chest pain?</h1>
+      <p>The possible causes of chest pain may be lung-related.</p>
+      <p>Source: <a href="https://www.mayoclinic.org/diseases-conditions/chest-pain/symptoms-causes/syc-20370838">www.mayoclinic.org</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="chestPain" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="chestPain" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 6 -->
+  <div class="question-container" data-number="7">
+    <div class="question">
+      <h1>6. Do you cough?</h1>
+      <p>Coughing is one of the symptoms of many respiratory diseases.</p>
+      <p>Source: <a target="_blank" href="https://www.webmd.com/lung/dont-ignore-breathing-problems#:~:text=A%20thick%2C%20wet%20cough%20can,well%20as%20they%20used%20to.">www.webmd.com</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="cough" data-choice="dry" data-answer-type="choice" class="submit" style="width: 14rem;">Yes. Dry Coughing.</button>
+      </div>
+      <div>
+        <button data-question="cough" data-choice="productive" data-answer-type="choice" class="submit" style="width: 14rem;">Yes. Productive (wet) Coughing.</button>
+      </div>
+      <div>
+        <button data-question="cough" data-choice="dry" data-answer-type="choice" class="submit" style="width: 14rem;">No.</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 7 -->
+  <div class="question-container" data-number="8">
+    <div class="question">
+      <h1>7. Do you cough up blood?</h1>
+      <p>The condition of coughing up blood (or Hemotypsis) indicates airway bleeding, and may be caused by many different respiratory diseases such as tuberculosis or pneumonia.</p>
+      <p>Source: <a target="_blank" href="https://en.wikipedia.org/wiki/Hemoptysis#:~:text=Hemoptysis%20is%20the%20coughing%20up,pneumonia%2C%20and%20certain%20cardiovascular%20conditions.">Wikipedia</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="coughingUpBlood" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="coughingUpBlood" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 8 -->
+  <div class="question-container" data-number="9">
+    <div class="question">
+      <h1>8. Do you have a fever?</h1>
+      <p>The CDC considers a person to have a fever when he or she has measured temperature of 100.4°F (38°C).</p>
+      <p>Source: <a target="_blank" href="https://www.cdc.gov/quarantine/air/reporting-deaths-illness/definitions-symptoms-reportable-illnesses.html">www.cdc.gov</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="fever" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="fever" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 9 -->
+  <div class="question-container" data-number="10">
+    <div class="question">
+      <h1>9. Do you experience rapid breathing?</h1>
+      <p>In adult humans at rest, any respiratory rate between 12 and 20 breaths is normal and tachypnea is indicated by a rate greater than 20 breaths per minute.</p>
+      <p>Source: <a target="_blank" href="https://en.wikipedia.org/wiki/Tachypnea#:~:text=Tachypnea%20is%20a%20respiration%20rate,resulting%20in%20abnormally%20rapid%20breathing.&text=In%20adult%20humans%20at%20rest,than%2020%20breaths%20per%20minute.">Wikipedia.</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="rapidBreathing" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="rapidBreathing" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 10 -->
+  <div class="question-container" data-number="11">
+    <div class="question">
+      <h1>10. Do you experience shortness of breath?</h1>
+      <p>Shortness of breath (or dyspnea) is often described as an intense tightening in the chest, air hunger, difficulty breathing, breathlessness or a feeling of suffocation.</p>
+      <p>Source: <a target="_blank" href="https://www.mayoclinic.org/symptoms/shortness-of-breath/basics/definition/sym-20050890#:~:text=Shortness%20of%20breath%20%E2%80%94%20known%20medically,breath%20in%20a%20healthy%20person.">Mayoclinic</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="shortnessOfBreath" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="shortnessOfBreath" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 11 -->
+  <div class="question-container" data-number="12">
+    <div class="question">
+      <h1>11. Do you experience rapid heartbeat?</h1>
+      <p>Tachycardia is the medical term for a heart rate over 100 beats per minute.</p>
+      <p>Source: <a target="_blank" href="https://www.mayoclinic.org/diseases-conditions/tachycardia/symptoms-causes/syc-20355127#:~:text=Tachycardia%20heartbeat,-In%20tachycardia%2C%20an&text=Tachycardia%20is%20the%20medical%20term,to%20have%20a%20fast%20heartbeat.">Mayoclinic</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="rapidHeartbeat" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="rapidHeartbeat" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 12 -->
+  <div class="question-container" data-number="13">
+    <div class="question">
+      <h1>12. Do you experience wheezing?</h1>
+      <p>Wheezing is a high-pitched whistling sound made while you breathe.</p>
+      <p>Source: <a target="_blank" href="https://www.healthline.com/health/wheezing#:~:text=Wheezing%20is%20a%20high%2Dpitched,that%20requires%20diagnosis%20and%20treatment.">www.healthline.com</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="wheezing" data-choice="Y" data-answer-type="choice" class="submit" style="width: 4rem;">Yes</button>
+      </div>
+      <div>
+        <button data-question="wheezing" data-choice="N" data-answer-type="choice" class="submit" style="width: 4rem;">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- question 13 -->
+  <div class="question-container" data-number="14">
+    <div class="question">
+      <h1>13. How long your symptoms last?</h1>
+      <p>Symptoms of some respiratory diseases like COVID 19 can last for months.</p>
+      <p>Source: <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/long-term-effects.html">www.cdc.gov</a></p>
+    </div>
+    <div class="input">
+      <div>
+        <button data-question="duration" data-choice="<1 week" data-answer-type="choice" class="submit" style="width: 12rem;">Less than one week</button>
+      </div>
+      <div>
+        <button data-question="duration" data-choice=">1 week, <4 weeks" data-answer-type="choice" class="submit" style="width: 12rem;">More than one week, less than a month</button>
+      </div>
+      <div>
+        <button data-question="duration" data-choice="months" data-answer-type="choice" class="submit" style="width: 12rem;">A few months</button>
+      </div>
+      <div>
+        <button data-question="duration" data-choice="years" data-answer-type="choice" class="submit" style="width: 12rem;">A few years</button>
+      </div>
+    </div>
+  </div>
+
+  <!--  Result -->
+  <div class="question-container" data-number="15">
+    <div class="question">
+      <h1 id="username">,</h1>
+      <p id="youhave">you probably have</p>
+      <h2 id="disease" style="font-weight: 400"></h2>
+      <p id="percentage"></p>
+      <details>
+        <summary>Review your answer</summary>
+        <p id="review-name">Name: </p>
+        <p id="review-age">Age: </p>
+        <p id="review-gender">Gender: </p>
+        <p id="review-familyHistory">Family Health History: </p>
+        <p id="review-smokingHistory">Smoking History: </p>
+        <p id="review-chestPain">Chest pain: </p>
+        <p id="review-cough">Coughing: </p>
+        <p id="review-coughingUpBlood">Coughing Blood: </p>
+        <p id="review-fever">Fever: </p>
+        <p id="review-rapidBreathing">Rapid Breathing: </p>
+        <p id="review-shortnessOfBreath">Shortness of breath: </p>
+        <p id="review-rapidHeartbeat">Rapid Heartbeat: </p>
+        <p id="review-wheezing">Wheezing: </p>
+        <p id="review-duration">Duration of Symptoms: </p>
+      </details>
+      <button class="try-agn-btn" onclick="location.reload();">Try again</button>
+
+    </div>
+  </div>
+</div>
