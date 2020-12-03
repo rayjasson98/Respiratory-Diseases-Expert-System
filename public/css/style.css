@@ -109,3 +109,15 @@ input:focus { outline:none; }
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: gray;
 }
+
+.try-agn-btn {
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  border: none;
+  background-color: #3B82F6;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color linear .2s;
+}
