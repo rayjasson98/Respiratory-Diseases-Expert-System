@@ -177,7 +177,7 @@ choiceBtns.forEach((btn, i) => {
     // if it is the last submit button:
     // get diagnosis and updates the state
     if (currentCardNumber === 14) {
-      const esUrl = 'http://localhost:3000/diagnosis/';
+      const esUrl = 'diagnosis/';
       const requestUrl = `${esUrl}${JSON.stringify(facts)}`;
       fetch(requestUrl)
         .then(response => response.json())
