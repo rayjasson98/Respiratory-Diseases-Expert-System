@@ -9,11 +9,11 @@ layout: default
 
 <br>
 
-## :notebook: Background
+## Background
 
 This is a simple expert system for diagnosis of respiratory diseases written in JavaScript. The expert system is developed using [rools](https://github.com/frankthelen/rools), a small rule engine for Node.js, and [Handlebars.js](https://github.com/handlebars-lang/handlebars.js), a semantic templating language for JavaScript. [Try it here!](https://respiratory-diseases-es.herokuapp.com/)
 
-<p align=center><img src="/docs/img/ui.png"></p>
+<p align=center><img src="./docs/img/ui.png"></p>
 <p align="center"><i>UI of the expert system</i></p>
 
 <br>
@@ -55,16 +55,16 @@ The differential diagnosis is based on a set of 13 factors that are categorized 
 
 <br>
 
-## :evergreen_tree: Building Decision Tree using ID3 Algorithm
+## Build Decision Tree using ID3 Algorithm
 
 The [Iterative Dichotomiser 3 (ID3) algorithm](https://en.wikipedia.org/wiki/ID3_algorithm#:~:text=In%20decision%20tree%20learning%2C%20ID3,and%20natural%20language%20processing%20domains.) is used to generate a decision tree for the expert system. The decision tree can be converted into a comparable rule set in which each rule corresponds to a possible path from the root node to any leaf node. The rule set is used as the rule engine for the expert system.
 
-<p align=center><img src="/docs/img/decision_tree.png"></p>
+<p align=center><img src="./docs/img/decision_tree.png"></p>
 <p align="center"><i>The decision tree</i></p>
 
 <br>
 
-:unlock: **Note that only 9 out of 13 factors are used to extract the decision rules.**
+**Note that only 9 out of 13 factors are used to extract the decision rules.**
 
 This is due to 2 rationales:
 - The 9 included factors: smoking history, chest pain, cough, coughing up blood, fever, rapid breathing, rapid heartbeat, shortness of breath and wheezing are the primary predictors or indicators of respiratory diseases. These predictors are symptoms that are caused directly by a particular respiratory disease. Smoking history is an exception here. It is not a symptom, but it is the *leading cause* of most respiratory diseases.
@@ -72,7 +72,7 @@ This is due to 2 rationales:
 
 <br>
 
-## :speech_balloon: Implementation in JavaScript
+## Implementation in JavaScript
 
 The decision rules are transformed into JavaScript code using [rools](https://github.com/frankthelen/rools). For example:
 
@@ -116,7 +116,7 @@ rules[1] = new Rule({
 
 <br>
 
-## :computer: Program Execution
+## Program Execution
 
 ### **Run locally for development**
 
@@ -135,7 +135,7 @@ This app is also deployed on [Heroku](https://www.heroku.com/).
 
 <br>
 
-## :black_nib: References
+## References
 
 - [WikiDoc for Respiratory Disease Differential Diagnosis](https://www.wikidoc.org/index.php/Respiratory_disease_differential_diagnosis)
 - [WikiDoc for COVID-19 Differential Diagnosis](https://www.wikidoc.org/index.php/COVID-19_differential_diagnosis)
