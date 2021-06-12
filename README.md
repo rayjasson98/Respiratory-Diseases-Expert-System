@@ -1,5 +1,7 @@
 # Respiratory Diseases Expert System
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Frayjasson98%2FRespiratory-Diseases-Expert-System&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 *[Ray Jasson](mailto:holmesqueen2070@yahoo.com)*<br>
 *30/01/2021*<br>
 
